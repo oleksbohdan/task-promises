@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div.modal-background{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(0.4turn, rgba(255, 255, 255, 0.91), rgba(0, 139, 139, 0.3));
+    }
+
+    div.modal-background div.window{
+        height: auto;
+        width: 600px;
+        margin-bottom: 200px;
+        padding: 10px;
+        background: linear-gradient(0.4turn, rgba(47, 79, 79, 0.75), rgba(0, 139, 139, 0.75));
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.modal-background div.window p{
+        margin: 0;
+        font-family: Consolas;
+        color: whitesmoke;
+        text-shadow: rgba(198, 198, 198, 0.3) 1px 1px;
+    }
+
+    div.modal-background div.window div.area{
+        width: 90%;
+        height: auto;
+        padding: 15px 2.5%;
+        margin: 7px 0;
+        background-color: rgba(245, 245, 245, 0.9);
+        border-radius: 5px;
+        font: 12px Consolas;
+        text-align: left;
+    }
+
+    div.modal-background div.window div.area span{
+        font-weight: bold;
+    }
+
+    div.modal-background div.window button{
+        border-radius: 3px;
+        background: rgba(245, 245, 245, 0.81);
+        border: none;
+        padding: 3px 7px;
+    }
+
+    div.modal-background div.window button:hover{
+        background-color: rgba(245, 245, 245, 0.4);
+    }
+
+    div.modal-background div.window button:focus{
+        background: none;
+    }
+
+    div.modal-background div.window button span{
+        font-family: Consolas;
+    }
+
+    input[type="text"] {
+        width: 200px;
+        height: 20px;
+        padding-right: 50px;
+    }
+
+    input[type="submit"] {
+        margin-left: -50px;
+        height: 25px;
+        width: 50px;
+        background: #2f4f4f;
+        color: white;
+        border: 0;
+
+    }
+</style>
+<body>
+<ol id="items">
+</ol>
+<div id='modal' class="modal-background">
+    <div class="window">
+        <p>Starship details</p>
+        <div class="area"></div>
+        <button id="close"><span>close</span></button>
+    </div>
+</div>
+<input id="search-field" type="text"><input id="search-button" type="submit" value="search">
+<script src="promises.js"></script>
+</body>
+</html>
